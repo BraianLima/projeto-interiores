@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento - Projetos de Interiores</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container header-content">
+      <h1>Projetos de Interiores</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="orcamento.html">Orçamento</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="form-container card">
+      <h2>Solicite um Orçamento</h2>
+      <form id="orcamentoForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Nome Completo</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefone</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="project">Tipo de Projeto</label>
+          <select id="project" name="project" required>
+            <option value="">Selecione uma opção</option>
+            <option value="residencial">Residencial Completo</option>
+            <option value="cozinha">Cozinha</option>
+            <option value="sala">Sala</option>
+            <option value="quarto">Quarto</option>
+            <option value="banheiro">Banheiro</option>
+            <option value="escritorio">Escritório</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Detalhes do Projeto</label>
+          <textarea id="message" name="message" rows="4"
+            placeholder="Descreva suas necessidades e ideias para o projeto..." required></textarea>
+        </div>
+
+        <button type="submit" class="button button-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m22 2-7 20-4-9-9-4Z" />
+            <path d="M22 2 11 13" />
+          </svg>
+          <span>Enviar Solicitação</span>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
